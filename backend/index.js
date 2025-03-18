@@ -1,11 +1,18 @@
 import express from 'express';
-const app = express();
-const PORT = 8000
+import dotenv from 'dotenv';
 import userRoutes from './routes/index.routes.js';
+import "./configs/database.js";
 
+dotenv.config(); 
 
-app.use("/api" , userRoutes);
+const app = express();
+const PORT = 8000;
+
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true })); 
+
+app.use("/api", userRoutes);
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`SERVER STARTED : http://localhost:${PORT}`.bgWhite.black);
 });

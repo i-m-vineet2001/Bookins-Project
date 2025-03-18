@@ -20,8 +20,8 @@ const Navbar = () => {
           <Link to="/hotels" className="text-sm font-medium hover:underline">
             Hotels
           </Link>
-          <Link to="/about" className="text-sm font-medium hover:underline">
-            About
+          <Link to="/search" className="text-sm font-medium hover:underline">
+            Search
           </Link>
           <Link to="/contact" className="text-sm font-medium hover:underline">
             Contact
